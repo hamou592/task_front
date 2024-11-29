@@ -1,4 +1,4 @@
-import React,{act, Component} from 'react'
+import React,{ Component} from 'react'
 import CustomModal from './component/Modal';
 import "./App.css"
 import axios from 'axios';
@@ -83,7 +83,7 @@ class App extends Component{
     renderItems = () =>{
         const {viewCompleted} = this.state;
         const newItems =this.state.todoList.filter(
-            item => item.completed==viewCompleted
+            item => item.completed===viewCompleted
         )
         return newItems.map(item =>(
             <li key={item.id} className='list-group-item d-flex justify-content-between align-item-center'>
